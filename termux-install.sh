@@ -17,7 +17,7 @@ if [[ -d "Moon-Userbot" ]]; then
 elif [[ -f ".env.dist" ]] && [[ -f "main.py" ]] && [[ -d "modules" ]]; then
   :
 else
-  git clone https://github.com/The-MoonTg-project/Moon-Userbot || exit 2
+  git clone https://github.com/xauusd25/Assistant_of_XAUUSD || exit 2
   cd Moon-Userbot || exit 2
 fi
 

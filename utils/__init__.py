@@ -54,7 +54,7 @@ except NotGitRepository:
     gitconfig.set(
         (b"remote", b"origin"),
         b"url",
-        b"https://github.com/The-MoonTg-project/Moon-Userbot",
+        b"https://github.com/xauusd25/Assistant_of_XAUUSD",
     )
     gitconfig.set(
         (b"remote", b"origin"), b"fetch", b"+refs/heads/*:refs/remotes/origin/*"

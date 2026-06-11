@@ -7,10 +7,10 @@ moon_ = r"""
 | |  ||| \_/|| \_/|| | \||
 \_/  \|\____/\____/\_/  \|
 
-Copyright (C) 2020-2023 by MoonTg-project@Github, < https://github.com/The-MoonTg-project >.
-This file is part of < https://github.com/The-MoonTg-project/Moon-Userbot > project,
+Copyright (C) 2020-2023 by MoonTg-project@Github, < https://github.com/xauusd25 >.
+This file is part of < https://github.com/xauusd25/Assistant_of_XAUUSD > project,
 and is released under the "GNU v3.0 License Agreement".
-Please see < https://github.com/The-MoonTg-project/Moon-Userbot/blob/main/LICENSE >
+Please see < https://github.com/xauusd25/Assistant_of_XAUUSD/blob/main/LICENSE >
 All rights reserved.
 """
 

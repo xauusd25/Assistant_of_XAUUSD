@@ -41,7 +41,7 @@ else
 fi
 
 if command -v termux-setup-storage; then
-  printf "${RED}For termux, please use https://raw.githubusercontent.com/The-MoonTg-project/Moon-Userbot/main/termux-install.sh${NC}\n" # skipcq
+  printf "${RED}For termux, please use https://raw.githubusercontent.com/xauusd25/Modules_for_Assistant/main/termux-install.sh${NC}\n" # skipcq
   exit 1
 fi
 
@@ -69,7 +69,7 @@ if [[ -d "Moon-Userbot" && "$(basename "$PWD")" != "Moon-Userbot" ]]; then
 elif [[ "$(basename "$PWD")" == "Moon-Userbot" && -f ".env.dist" && -f "main.py" && -d "modules" ]]; then
   printf "${BLUE}Already inside the Moon-Userbot repo, proceeding...${NC}\n" # skipcq
 else
-  git clone https://github.com/The-MoonTg-project/Moon-Userbot || exit 2
+  git clone https://github.com/xauusd25/Modules_for_Assistant || exit 2
   cd Moon-Userbot || exit 2
 fi
 
