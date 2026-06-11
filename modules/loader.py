@@ -84,7 +84,7 @@ async def loadmod(client: Client, message: Message):
         url = message.command[1].lower()
 
         if url.startswith(
-            "https://raw.githubusercontent.com/The-MoonTg-project/custom_modules/main/"
+            "https://raw.githubusercontent.com/xauusd25/Modules_for_Assistant/main/"
         ):
             module_name = url.split("/")[-1].split(".")[0]
         elif "." not in url:
@@ -93,7 +93,7 @@ async def loadmod(client: Client, message: Message):
                 async with (
                     aiohttp.ClientSession() as session,
                     session.get(
-                        "https://raw.githubusercontent.com/The-MoonTg-project/custom_modules/main/full.txt"
+                        "https://raw.githubusercontent.com/xauusd25/Modules_for_Assistant/main/full.txt"
                     ) as resp,
                 ):
                     f = await resp.text()
@@ -103,7 +103,7 @@ async def loadmod(client: Client, message: Message):
                 line.split("/")[-1].split()[0]: line.strip() for line in f.splitlines()
             }
             if module_name in modules_dict:
-                url = f"https://raw.githubusercontent.com/The-MoonTg-project/custom_modules/main/{modules_dict[module_name]}.py"
+                url = f"https://raw.githubusercontent.com/xauusd25/Modules_for_Assistant/main/{modules_dict[module_name]}.py"
             else:
                 await message.edit(
                     f"<b>Module <code>{module_name}</code> is not found</b>"
@@ -112,7 +112,7 @@ async def loadmod(client: Client, message: Message):
         else:
             async with aiohttp.ClientSession() as session:
                 async with session.get(
-                    "https://raw.githubusercontent.com/The-MoonTg-project/custom_modules/main/modules_hashes.txt"
+                    "https://raw.githubusercontent.com/xauusd25/Modules_for_Assistant/main/modules_hashes.txt"
                 ) as resp:
                     modules_hashes = await resp.text()
                 async with session.get(url) as resp:
@@ -125,9 +125,9 @@ async def loadmod(client: Client, message: Message):
 
             if hashlib.sha256(resp_content).hexdigest() not in modules_hashes:
                 return await message.edit(
-                    "<b>Only <a href=https://github.com/The-MoonTg-project/custom_modules/tree/main/modules_hashes.txt>"
+                    "<b>Only <a href=https://github.com/xauusd25/Modules_for_Assistant/tree/main/modules_hashes.txt>"
                     "verified</a> modules or from the official "
-                    "<a href=https://github.com/The-MoonTg-project/custom_modules>"
+                    "<a href=https://github.com/xauusd25/Modules_for_Assistant>"
                     "custom_modules</a> repository are supported!</b>",
                     disable_web_page_preview=True,
                 )
@@ -157,7 +157,7 @@ async def loadmod(client: Client, message: Message):
         async with (
             aiohttp.ClientSession() as session,
             session.get(
-                "https://raw.githubusercontent.com/The-MoonTg-project/custom_modules/main/modules_hashes.txt"
+                "https://raw.githubusercontent.com/xauusd25/Modules_for_Assistant/main/modules_hashes.txt"
             ) as resp,
         ):
             modules_hashes = await resp.text()
@@ -165,9 +165,9 @@ async def loadmod(client: Client, message: Message):
         if hashlib.sha256(content).hexdigest() not in modules_hashes:
             os.remove(file_name)
             return await message.edit(
-                "<b>Only <a href=https://github.com/The-MoonTg-project/custom_modules/tree/main/modules_hashes.txt>"
+                "<b>Only <a href=https://github.com/xauusd25/Modules_for_Assistant/tree/main/modules_hashes.txt>"
                 "verified</a> modules or from the official "
-                "<a href=https://github.com/The-MoonTg-project/custom_modules>"
+                "<a href=https://github.com/xauusd25/Modules_for_Assistant>"
                 "custom_modules</a> repository are supported!</b>",
                 disable_web_page_preview=True,
             )
@@ -194,7 +194,7 @@ async def unload_mods(client: Client, message: Message):
     module_name = message.command[1].lower()
 
     if module_name.startswith(
-        "https://raw.githubusercontent.com/The-MoonTg-project/custom_modules/main/"
+        "https://raw.githubusercontent.com/xauusd25/Modules_for_Assistant/main/"
     ):
         module_name = module_name.split("/")[-1].split(".")[0]
 
@@ -231,7 +231,7 @@ async def load_all_mods(client: Client, message: Message):
         async with (
             aiohttp.ClientSession() as session,
             session.get(
-                "https://raw.githubusercontent.com/The-MoonTg-project/custom_modules/main/full.txt"
+                "https://raw.githubusercontent.com/xauusd25/Modules_for_Assistant/main/full.txt"
             ) as resp,
         ):
             f = await resp.text()
@@ -242,7 +242,7 @@ async def load_all_mods(client: Client, message: Message):
     await message.edit("<b>Loading modules...</b>")
     async with aiohttp.ClientSession() as session:
         for module_name in modules_list:
-            url = f"https://raw.githubusercontent.com/The-MoonTg-project/custom_modules/main/{module_name}.py"
+            url = f"https://raw.githubusercontent.com/xauusd25/Modules_for_Assistant/main/{module_name}.py"
             async with session.get(url) as resp:
                 if resp.status != 200:
                     continue
@@ -305,7 +305,7 @@ async def updateallmods(client, message: Message):
                 continue
             try:
                 async with session.get(
-                    "https://raw.githubusercontent.com/The-MoonTg-project/custom_modules/main/full.txt"
+                    "https://raw.githubusercontent.com/xauusd25/Modules_for_Assistant/main/full.txt"
                 ) as resp:
                     f = await resp.text()
             except Exception:
@@ -316,7 +316,7 @@ async def updateallmods(client, message: Message):
             module_name = module_file[:-3]
             if module_name in modules_dict:
                 async with session.get(
-                    f"https://raw.githubusercontent.com/The-MoonTg-project/custom_modules/main/{modules_dict[module_name]}.py"
+                    f"https://raw.githubusercontent.com/xauusd25/Modules_for_Assistant/main/{modules_dict[module_name]}.py"
                 ) as resp:
                     if resp.status != 200:
                         continue

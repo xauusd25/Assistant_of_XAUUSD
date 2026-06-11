@@ -37,7 +37,7 @@ async def support(_, message: Message):
     await message.edit(
         f"<b>Moon-Userbot\n\n"
         "GitHub: <a href=https://github.com/The-MoonTg-project/Moon-Userbot>Moon-Userbot</a>\n"
-        "Custom modules repository: <a href=https://github.com/The-MoonTg-project/custom_modules>"
+        "Custom modules repository: <a href=https://github.com/xauusd25/Modules_for_Assistant>"
         "custom_modules</a>\n"
         "License: <a href=https://github.com/The-MoonTg-project/Moon-Userbot/blob/master/LICENSE>GNU GPL v3</a>\n\n"
         "Channel: @moonuserbot\n"
